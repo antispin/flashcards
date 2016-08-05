@@ -1,0 +1,12 @@
+
+<div style="margin:50px; padding:60px; border:#ededed 40px solid;">
+  <p><small> Это из вьюхи </small></p>
+  <h1> Список карточек </h1>
+  <p>
+    <% @cards.each do |card| %>
+      <%= card.inspect %><br />
+    <% end %>
+  </p>
+  <%= link_to 'Новая', new_card_path  %>
+  <p><%= @cards.size %></p>
+</div>

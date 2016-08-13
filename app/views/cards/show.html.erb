@@ -1,2 +1,8 @@
-<h1>Cards#show</h1>
-<p>Find me in app/views/cards/show.html.erb</p>
+<h1> Просмотр карточки </h1>
+
+<p> <%= @card.inspect -%> </p>
+
+
+<%= link_to 'Все карточки', cards_path -%>
+|
+<%= link_to 'Редактировать', edit_card_path(@card) -%>

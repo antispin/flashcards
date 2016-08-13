@@ -22,22 +22,30 @@
       <header class="clearfix">
         <h1>Флэшкарточкер</h1>
         <ul class="navigation-links">
-          <li><%= link_to 'Все карточки', cards_path -%></li>
-          <li><a href="#">Добавить карточку</a></li>
+          <li><%= link_to 'Все карточки',      cards_path     -%></li>
+          <li><%= link_to 'Добавить карточку', new_card_path  -%></li>
         </ul>
       </header>
 
       <h1>Привет, мир!</h1>
 
       <section>
-        <%= yield %>
+        <% if controller_name == 'cards' %>
+          <div style="margin:10px; padding:30px; border:#ededed 30px solid;">
+            <p><small> Это из вьюхи </small></p>
+            <%= yield %>
+          </div>
+        <% else %>
+          <%= yield %>
+        <% end %>
       </section>
 
 
-      <section>
-        <%= render 'layouts/experiments' %>
-      </section>
-
+      <% if @expir %>
+        <section>
+          <%= render 'layouts/experiments' %>
+        </section>
+      <% end %>
 
 
     </section>

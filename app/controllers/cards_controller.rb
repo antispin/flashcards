@@ -2,7 +2,6 @@ class CardsController < ApplicationController
 
   before_action :set_card, only: [:show, :edit, :update, :destroy]
 
-
   def index
     @cards = Card.all
   end
@@ -41,7 +40,6 @@ class CardsController < ApplicationController
     redirect_to note_cards_url, notice: 'Карточка удалена'
   end
 
-
   private
 
   def set_card
@@ -51,7 +49,4 @@ class CardsController < ApplicationController
   def card_params
     params.fetch(:card, {}).permit(:original_text, :translated_text, :review_date)
   end
-
-
-
 end

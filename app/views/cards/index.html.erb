@@ -1,7 +1,10 @@
   <h1> Список карточек </h1>
   <ul>
     <% @cards.each do |card| %>
-      <li><%= card.inspect %></li>
+      <li>
+        <%= card.review_date.strftime("%d.%m.20%y").to_s %>
+        <%= card.inspect %>
+      </li>
     <% end %>
   </ul>
   <%= link_to 'Новая', new_card_path  %>

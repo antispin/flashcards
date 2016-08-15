@@ -40,10 +40,10 @@ Style/ExtraSpacing:
   # lines.
   AllowForAlignment: true
   # When true, forces the alignment of = in assignments on consecutive lines.
-  ForceEqualSignAlignment: true
+  ForceEqualSignAlignment: false
   Exclude:
-    - 'app/controllers/cards_controller.rb'
-    - 'bin/spring'
+    #- 'app/controllers/cards_controller.rb'
+    #- 'bin/spring'
 
 
 Style/Documentation:
@@ -61,5 +61,4 @@ Style/EmptyLinesAroundClassBody:
 
 Style/EmptyLinesAroundBlockBody:
   Enabled: false
-
 

@@ -17,7 +17,7 @@ class CardsController < ApplicationController
   end
 
   def create
-    @card = Card.new(card_params)
+    @card             = Card.new(card_params)
     @card.review_date = Time.now.to_datetime
     if @card.save
       redirect_to @card, notice: 'Карточка создана'
